@@ -1,0 +1,100 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+
+}
+.parent{
+    background-color: bisque;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width :768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width :992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width :1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+
+.row{
+    display: flex;
+}
+.leftSection{
+    width: 50%;
+
+
+}
+.rightSection{
+    width: 50%;
+    margin-left: 3%;
+}
+.smallImg{ 
+    margin: 2%;
+    width: 22%;
+}
+.group-small-img{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+ }
+
+ .buyBtn {
+    padding: 8px;
+    color: whitesmoke;
+    background-color: rgb(231, 122, 20);
+    border: none;
+    font:bolder ;
+
+ }
+ .addCartBtn {
+    padding: 8px;
+    color: whitesmoke;
+    background-color: rgb(231, 122, 20);
+    border: none;
+    font:bolder ;
+
+ }
+
+
+ .buyBtn:hover{
+    opacity: .7;
+ }
+
+ #quantity:focus{
+    outline: none;
+
+ }
+ #bigImg:hover{
+    transition: all .3s ;
+    transform: scale(1.1);    
+ }
+
+ .smallImg:hover{
+    opacity: .7;
+    transition: all .3s ;
+    transform: scale(1.2);
+ }
+
+
+
