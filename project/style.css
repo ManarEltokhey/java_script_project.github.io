@@ -221,17 +221,18 @@ li.footer-links a{
     margin-right: 5px;
 }
 
-.container{
+/* .container{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 
-}
+} */
 #multi-img{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content:center;
 }
 #why-id{
   display: flex;
