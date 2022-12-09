@@ -184,7 +184,7 @@ nav {
  margin: auto;
   width: 20%;
 }
-#quantity {
+.quantity {
   width: 50%;
   padding: 15px;
   font-size: 15px;
@@ -193,6 +193,7 @@ nav {
   text-decoration: none;
   padding: 3px;
   margin-top: 10px;
+  cursor: pointer;
 }
 .cart-container{
   display:flex;
