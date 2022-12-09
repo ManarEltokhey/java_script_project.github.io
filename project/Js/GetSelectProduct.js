@@ -46,7 +46,7 @@ function getProducts()
             return function (){
                  console.log(val)
                 localStorage.setItem("Pro",val)
-                window.open("http://127.0.0.1:5500/productPage.html")
+                window.open("productPage.html")
             }
 
         })(counter)

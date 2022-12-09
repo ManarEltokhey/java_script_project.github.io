@@ -33,6 +33,7 @@
   }
 .navbar{
     display:flex;
+    justify-content: space-between;
 }
 
 
@@ -84,10 +85,10 @@
     text-decoration: none;
     /* font-size: large; */
   }
-  .container{
+  /* .container{
     margin: auto;
     width:80%;
-  }
+  } */
   .links{
     width: 40%;
   }

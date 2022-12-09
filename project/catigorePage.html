@@ -7,9 +7,45 @@
     <title>Catigore Page</title>
     <script src="https://kit.fontawesome.com/2a2e54b9f8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/cssCatigorePage.css">
+    <link rel="stylesheet" href="css/navstyle.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    
+
 </head>
 <body>
-    <nav style="margin: 100px;;"></nav>
+    <nav>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo-container">
+                    <a href="index.html"><img id="logo" src="resources/new3.webp" alt="b tech logo"></a>
+                </div>
+                <div class="links-container">
+                    <div class="dropdown">
+                        <button class="dropbtn">Categories<i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                    <form class="search" action="#"><input id="search" placeholder="Search" type="text"><button
+                            type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></form>
+
+                    <div class="icons">
+                        <a href="signUp.html"><i class="fa-regular fa-user"></i></a>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+
     <section id="featured"> 
          <div class="container "style="padding-bottom: 5px ; margin-top: 5px;" >
             <h3>Our Product <hr></h3> 
@@ -73,6 +109,68 @@
 
          </div>
     </section>
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <div class="footer-card">
+                    <h2>B.TECH </h2>
+                    <br>
+                    <br>
+                    <p>B.TECH is a retail chain of household appliances and consumer electronics in Egypt.</p>
+                    <br><br><br>
+                    <div class="footer-socials">
+                        <h2>Contact with us</h2>
+                        <br><br>
+                        <a href="https://www.facebook.com/btech.eg/" target="_blank"><img
+                                src="resources/facebook.png"></a>
+                        <a href="https://www.instagram.com/mybtech/" target="_blank"><img
+                                src="resources/instagram.png"></a>
+                        <a href="https://www.youtube.com/channel/UCb38BG_mMf7BUumTVc10gAw/videos" target="_blank"><img
+                                src="resources/youtube.png"></a>
+
+                    </div>
+                </div>
+                <div class="footer-card">
+                    <h2>About</h2>
+                    <br>
+                    <br>
+                    <p>
+                        <a style="color: white;" href="#">Work with us</a>
+                    </p>
+                </div>
+
+                <div class="footer-card">
+                    <h2>Trending right now</h2>
+                    <br>
+                    <!-- catigories -->
+                    <span>A108 Adam Street </span>
+                    <br><br>
+                    <span>New York, NY 535022 </span>
+                    <br><br>
+                    <span>United States</span>
+                    <br><br>
+                    <span>Phone: +1 5589 55488 55</span>
+                    <br><br>
+                    <span>Email: info@example.com</span>
+                </div>
+                <div class="footer-card">
+                    <h2>Download B-TECH app</h2>
+                    <br><br>
+                    <a href="https://apps.apple.com/us/app/b-tech/id1258773067">
+                        <img style="width: 96px;height: 32px;" src="resources/IOS.webp">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.btechapp&pli=1">
+                        <img style="width: 105px;height: 31.1px;" src="resources/Google.webp">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="copyright">
+            <p>© Copyright B-TECH. All Rights Reserved</p>
+        </div>
+    </div>
 
     <script src="JS/GetSelectProduct.js"></script>
 

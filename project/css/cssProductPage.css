@@ -59,16 +59,9 @@ body{
     justify-content: space-between;
  }
 
- .buyBtn {
-    padding: 8px;
-    color: whitesmoke;
-    background-color: rgb(231, 122, 20);
-    border: none;
-    font:bolder ;
-
- }
  .addCartBtn {
-    padding: 8px;
+    padding: 9px;
+    border-radius: 3px;
     color: whitesmoke;
     background-color: rgb(231, 122, 20);
     border: none;

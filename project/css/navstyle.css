@@ -4,10 +4,10 @@
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.container {
+/* .container {
   width: 90%;
   margin: auto;
-}
+} */
 
 nav {
   /* border-bottom:1px solid rgba(0, 0, 0, 0.678) ; */
@@ -16,7 +16,7 @@ nav {
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 #logo {
@@ -79,7 +79,7 @@ nav {
 }
 
 .search {
-  width: 50%;
+  width: 45%;
 }
 
 .search input {
