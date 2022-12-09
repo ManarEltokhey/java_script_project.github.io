@@ -35,9 +35,6 @@
     display:flex;
     justify-content: space-between;
 }
-
-
-
   .dropdown {
     float: left;
     overflow: hidden;
@@ -85,6 +82,12 @@
     text-decoration: none;
     /* font-size: large; */
   }
+  .container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
   /* .container{
     margin: auto;
     width:80%;
@@ -191,11 +194,12 @@ img {vertical-align: middle;}
     display: flex;
     justify-content: space-between;
     padding-top: 70px;
-    margin-top: 100px;
 }
 .footer-card{
     color:white;
-    width:30%;
+    padding: 8px;
+    width:25%;
+    
 }
 
 li.footer-links{
@@ -213,7 +217,7 @@ li.footer-links a{
 .copyright{
     color: white;
     margin: auto;
-    width:25%;
+    width:17%;
     position: relative;
     top: 30%;
 }
@@ -234,6 +238,11 @@ li.footer-links a{
   flex-wrap: wrap;
   flex-direction: row;
   justify-content:center;
+}
+.img-container-footer{
+  width: 100%;
+  display: flex;
+   justify-content: space-between;
 }
 #why-id{
   display: flex;

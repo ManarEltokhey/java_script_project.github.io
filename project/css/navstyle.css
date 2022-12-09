@@ -17,20 +17,24 @@ nav {
 .navbar {
   display: flex;
   justify-content: space-between;
+  text-align: center;
 }
 
 #logo {
-  margin: 20px 0px;
+   margin: 12px 0px; 
 }
 
 .logo-container {
-  width: 10%;
+  width: 15%;
 }
 
 .links-container {
-  width: 80%;
-  margin: 20px 0px;
+  width: 85%;
+  
+  /* margin: 20px 0px; */
   display: flex;
+  justify-content: space-between;
+
 }
 
 .dropdown {
@@ -79,6 +83,8 @@ nav {
 }
 
 .search {
+  padding-top: 8px ;
+  padding-bottom: 8px ;
   width: 45%;
 }
 
@@ -99,12 +105,12 @@ nav {
 
 .icons {
   font-size: 20px;
-  width: 20%;
+  
   display: flex;
 }
 
 .icons i {
-  margin: 9px;
+  margin: 14px;
   color: black;
 }
 

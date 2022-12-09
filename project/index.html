@@ -11,6 +11,11 @@
     <link href="fontawesome-free-6.2.1-web/css/brands.css" rel="stylesheet">
     <link href="fontawesome-free-6.2.1-web/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cssCatigorePage.css">
+    <link rel="stylesheet" href="css/cssProductPage.css">
+
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/navstyle.css">
 </head>
@@ -110,7 +115,7 @@
     <label style="font-size: 50px;margin-bottom: 5px;" ><b>Why B-TECH</b></label>
     <br><br>
 
-        <div class="col-12" id="why-id">
+        <div class="container" id="why-id">
         <div class="col-3">
             <a href="https://btech.com/en/minicash-info"><img src="resources/Imglink1webp.webp" alt="image not found" style="width: 90%; "></a>
         </div>
@@ -127,8 +132,26 @@
     </div>
   </div>
 
-<br><br><br>
-<div class="container">
+<section id="featured" style="margin-top:50px ;margin-bottom:50px;"> 
+    <div class="container textCenter"style="padding-bottom: 5px ; margin-top: 5px;
+    margin-bottom:50px;" >
+       <h3>Our Product </h3>
+       <br> 
+       <hr style="margin: auto;">
+    </div>
+    <div class="container" id="categoryContainer">
+    <!-- <div class="rowAbi" >
+        <h4>electronics</h4>
+       -->
+
+    </div>
+</div>
+</section>
+
+
+
+
+<!-- <div class="container">
 <div class="content">
     <div class="card">
         <img src="resources/phone1.webp">
@@ -161,7 +184,7 @@
         <button>Add to Cart <i class="fa-solid fa-plus"></i></button>
     </div>
 </div>
-</div>
+</div> -->
     <!-- footer -->
     <div class="footer">
         <div class="container">
@@ -210,12 +233,15 @@
                 <div class="footer-card">
                     <h2>Download B-TECH app</h2>
                     <br><br>
+
+                    <div class="img-container-footer">
                     <a href="https://apps.apple.com/us/app/b-tech/id1258773067">
                         <img style="width: 96px;height: 32px;" src="resources/IOS.webp">
                     </a>
                     <a href="https://play.google.com/store/apps/details?id=com.btechapp&pli=1">
                         <img style="width: 105px;height: 31.1px;" src="resources/Google.webp">
                     </a>
+                </div>
                 </div>
             </div>
         </div>
@@ -224,7 +250,10 @@
             <p>© Copyright B-TECH. All Rights Reserved</p>
         </div>
     </div>
+    <script src="js/getProductHome.js"></script>
+
     <script src="Js/js.js"></script>
+    <!-- <script src="js/getProductHome.js"></script> -->
 </body>
 
 </html>

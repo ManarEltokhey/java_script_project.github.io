@@ -10,7 +10,7 @@ function getProducts()
         //    console.log("ttttttttttttt")
         //    debugger;
 
-           var divContainer=document.getElementById("productContainer")
+           var productContainer=document.getElementById("productContainer")
 
            for (var pro of data) {
             counter++
