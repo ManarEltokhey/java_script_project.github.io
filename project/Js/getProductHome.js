@@ -114,10 +114,11 @@ function getProducts()
 
          var btn=document.createElement("input")
          btn.setAttribute("type","button")
-         btn.setAttribute("value","Buy Now")
+         btn.setAttribute("value","Add To Cart")
          btn.classList.add("buyBtn")
          btn.onclick=function(){
          localStorage.setItem("Pro"+pro.id,pro.id)
+
          }
          divPro.appendChild(btn)
 
