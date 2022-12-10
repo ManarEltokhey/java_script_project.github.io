@@ -8,6 +8,22 @@ for (var i = 0; i < quantityInputs.length; i++){
     var quantityInput=quantityInputs[i]
     quantityInput.addEventListener("change",quantityChanged)
 }
+var addToCartButtons = document.getElementsByClassName("buyBtn")
+for (var i = 0; i < addToCartButtons.length; i++) {
+    var addToCartButton = addToCartButtons[i]
+    addToCartButton.addEventListener("click", addToCart)
+}
+
+
+function addToCart(e){
+    var addButtonClicked=e.target
+    var productItem=addButtonClicked.parentElement
+    console.log(productItem)
+    var productImg=productItem.getElementsByClassName("p-img")[0].src
+    var productName=productItem.getElementsByClassName("p-Name")[0].innerText
+    var productPrice=productItem.getElementsByClassName("p-price")[0].innerText
+    console.log(productImg,productName,productPrice)
+}
 
 
 function quantityChanged(e)
