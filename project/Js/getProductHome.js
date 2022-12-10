@@ -96,7 +96,7 @@ function getProducts()
          }
          // ratePro.appendChild(getrate);
          divPro.appendChild(ratePro);
-         divPro.onclick=(function (val,category){
+         imgPro.onclick=(function (val,category){
             return function (){
                  category="electronics"
                 console.log(val)
@@ -162,7 +162,7 @@ function getProducts()
                  }
                  // ratePro.appendChild(getrate);
                  divPro.appendChild(ratePro);
-                 divPro.onclick=(function (val,category){
+                 imgPro.onclick=(function (val,category){
                     return function (){
                          category="men's clothing"
                         console.log(val)
@@ -228,7 +228,7 @@ function getProducts()
                 }
                 // ratePro.appendChild(getrate);
                 divPro.appendChild(ratePro);
-                divPro.onclick=(function (val,category){
+                imgPro.onclick=(function (val,category){
                     return function (){
                          category="women's clothing"
                         console.log(val)
@@ -295,7 +295,7 @@ function getProducts()
                 }
                 // ratePro.appendChild(getrate);
                 divPro.appendChild(ratePro);
-                divPro.onclick=(function (val,category){
+                imgPro.onclick=(function (val,category){
                     return function (){
                          category="jewelery"
                         console.log(val)

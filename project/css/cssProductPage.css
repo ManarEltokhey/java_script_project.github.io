@@ -4,12 +4,12 @@
     display: flex;
 }
 .leftSection{
-    width: 50%;
+    width: 40%;
 
 
 }
 .rightSection{
-    width: 50%;
+    width: 60%;
     margin-left: 3%;
 }
 .smallImg{ 
