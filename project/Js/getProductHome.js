@@ -98,7 +98,7 @@ function getProducts()
          divPro.appendChild(ratePro);
          divPro.onclick=(function (val,category){
             return function (){
-                 category="women's clothing"
+                 category="electronics"
                 console.log(val)
                 localStorage.setItem("Pro",val)
                 localStorage.setItem('pro.category',category)

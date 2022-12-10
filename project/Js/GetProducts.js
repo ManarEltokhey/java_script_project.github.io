@@ -1,6 +1,8 @@
 function getProducts()
 {
     var counter=0
+    var category =localStorage.getItem("pro.category")
+
 
     var xhttp=new XMLHttpRequest()
     xhttp.onreadystatechange=function(){
@@ -14,7 +16,7 @@ function getProducts()
 
            for (var pro of data) {
             counter++
-            if(pro.category==="electronics"){
+            if(pro.category===category){
         var divPro=document.createElement("div");
          divPro.classList.add("product","textCenter")
 
@@ -82,6 +84,7 @@ function getProducts()
 
 
     }
+
     xhttp.open("GET","https://fakestoreapi.com/products",true)
     xhttp.send();
 
