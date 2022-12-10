@@ -96,16 +96,17 @@ function getProducts()
          }
          // ratePro.appendChild(getrate);
          divPro.appendChild(ratePro);
-         divPro.onclick=(function (val){
-             return function (){
-                 console.log(val)
-                 localStorage.setItem("Pro",val)
-                 window.open("productPage.html")
+         divPro.onclick=(function (val,category){
+            return function (){
+                 category="women's clothing"
+                console.log(val)
+                localStorage.setItem("Pro",val)
+                localStorage.setItem('pro.category',category)
+                window.open("productPage.html")
 
-             }
-
-         })(counter)
-
+            }
+                    
+                            })(counter)
          var pricePro=document.createElement("h4")
          var txtPricePro=document.createTextNode(" $ "+ pro.price)
          pricePro.appendChild(txtPricePro)
@@ -161,16 +162,17 @@ function getProducts()
                  }
                  // ratePro.appendChild(getrate);
                  divPro.appendChild(ratePro);
-                 divPro.onclick=(function (val){
+                 divPro.onclick=(function (val,category){
                     return function (){
+                         category="men's clothing"
                         console.log(val)
                         localStorage.setItem("Pro",val)
+                        localStorage.setItem('pro.category',category)
                         window.open("productPage.html")
-
+ 
                     }
                             
-                                    })(counter)
-                            
+                                    })(counter)           
                  var pricePro=document.createElement("h4")
                  var txtPricePro=document.createTextNode(" $ "+ pro.price)
                  pricePro.appendChild(txtPricePro)
@@ -226,15 +228,17 @@ function getProducts()
                 }
                 // ratePro.appendChild(getrate);
                 divPro.appendChild(ratePro);
-                divPro.onclick=(function (val){
-                   return function (){
-                       console.log(val)
-                       localStorage.setItem("Pro",val)
-                       window.open("productPage.html")
-
-                   }
-                           
-                                   })(counter)
+                divPro.onclick=(function (val,category){
+                    return function (){
+                         category="women's clothing"
+                        console.log(val)
+                        localStorage.setItem("Pro",val)
+                        localStorage.setItem('pro.category',category)
+                        window.open("productPage.html")
+ 
+                    }
+                            
+                                    })(counter)
                            
                 var pricePro=document.createElement("h4")
                 var txtPricePro=document.createTextNode(" $ "+ pro.price)
@@ -292,16 +296,16 @@ function getProducts()
                 // ratePro.appendChild(getrate);
                 divPro.appendChild(ratePro);
                 divPro.onclick=(function (val,category){
-                   return function (){
-                        category="jewelery"
-                       console.log(val)
-                       localStorage.setItem("Pro",val)
-                       localStorage.setItem('pro.category',category)
-                       window.open("productPage.html")
-
-                   }
-                           
-                                   })(counter)
+                    return function (){
+                         category="jewelery"
+                        console.log(val)
+                        localStorage.setItem("Pro",val)
+                        localStorage.setItem('pro.category',category)
+                        window.open("productPage.html")
+ 
+                    }
+                            
+                                    })(counter)
                            
                 var pricePro=document.createElement("h4")
                 var txtPricePro=document.createTextNode(" $ "+ pro.price)
