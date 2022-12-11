@@ -1,4 +1,4 @@
-function getProduct()
+function showProduct()
 {
 
     var xhttp=new XMLHttpRequest()
@@ -16,16 +16,14 @@ function getProduct()
 
            var getrate= document.getElementById("proRate")
            var getRate=data.rating.rate;
-        //    console.log(typeof(data.rating.rate));
-           for(var i=0;i<=getRate;i++){
-               var iconStar =document.createElement("i")
+      
+           for(let i=0;i<=getRate;i++){
+               let iconStar =document.createElement("i")
                iconStar.classList.add("fa-solid","fa-star")
                getrate.appendChild(iconStar)
 
            }
-        //    ratePro.appendChild(getrate);
-        //    divPro.appendChild(getRate);
-
+        
 
            var proName= document.getElementById("proName")
            proName.innerHTML= data.title
@@ -43,4 +41,4 @@ function getProduct()
     xhttp.send();
 
 }
-getProduct();
+showProduct();

@@ -105,21 +105,24 @@ var  resPsw= regPsw.test(valPsw);
       document.getElementById("message").style.display = "none";
     }
     
-    var valid=false
     // When the user starts to type something inside the password field
     myInput.onkeyup = function() {
 
       // Validate lowercase letters
       var lowerCaseLetters = /[a-z]/g;
+      var upperCaseLetters = /[A-Z]/g;
+      var numbers = /[0-9]/g;
+      var btn =document.getElementById("btnSignUp")
+
       if(myInput.value.match(lowerCaseLetters)) {  
         letter.classList.remove("invalid");
         letter.classList.add("valid");
-        valid=true
+        btn.disabled=false;
 
       } else {
         letter.classList.remove("valid");
         letter.classList.add("invalid");
-        valid=false
+        btn.disabled=true;
       }
       
       // Validate capital letters
@@ -127,11 +130,11 @@ var  resPsw= regPsw.test(valPsw);
       if(myInput.value.match(upperCaseLetters)) {  
         capital.classList.remove("invalid");
         capital.classList.add("valid");
-        valid=true
+        btn.disabled=false;
       } else {
         capital.classList.remove("valid");
         capital.classList.add("invalid");
-        valid=false
+        btn.disabled=true;
       }
     
       // Validate numbers
@@ -139,37 +142,28 @@ var  resPsw= regPsw.test(valPsw);
       if(myInput.value.match(numbers)) {  
         number.classList.remove("invalid");
         number.classList.add("valid");
-        valid=true
+        btn.disabled=false;
       } else {
         number.classList.remove("valid");
         number.classList.add("invalid");
-        valid=false
+        btn.disabled=true;
       }
       
       // Validate length
       if(myInput.value.length >= 8) {
         length.classList.remove("invalid");
         length.classList.add("valid");
-        valid=true
+        btn.disabled=false;
       } else {
         length.classList.remove("valid");
         length.classList.add("invalid");
-        valid=false
-      }
-
-      if(valid){
-        var btn =getElementById("btnSignUp")
-        btn.style.disabled=true;
-      }
-
-    }
-
-   if(valid==false){
-        var btn =getElementById("btnSignUp")
         btn.disabled=true;
       }
 
+      
+    }
 
+  
 
 
 function store(){
@@ -177,46 +171,13 @@ function store(){
     var name = document.getElementById('inpEmail');
     var pw = document.getElementById('psw');
     
-    if(name.value.length == 0){
-    }else if(pw.value.length == 0){
-
-    }else if(name.value.length == 0 && pw.value.length == 0){
-    }
-    else{
+    
         console.log(pw)
         localStorage.setItem('inpEmail', name.value);
         localStorage.setItem('psw', pw.value);
         alert('Your account has been created');
+    
     }
-    }
 
-    // else if(pw.value.length > 8){
-    //     alert('Max of 8');
-
-    // }else if(!pw.value.match(numbers)){
-    //     alert('please add 1 number');
-
-    // }else if(!pw.value.match(upperCaseLetters)){
-    //     alert('please add 1 uppercase letter');
-
-    // }else if(!pw.value.match(lowerCaseLetters)){
-    //     alert('please add 1 lovercase letter');
-
-    //}
-  
-//}
-function check(){
-    var storedName = localStorage.getItem('inpEmail');
-    var storedPw = localStorage.getItem('psw');
-
-    var userName = document.getElementById('inpEmail');
-    var userPw = document.getElementById('inpPass');
-    var userRemember = document.getElementById("rememberMe");
-
-    if(userName.value == storedName && userPw.value == storedPw){
-        alert('You are logged in.');
-    }else{
-        alert('Error on login');
-    }
-}
+   
      

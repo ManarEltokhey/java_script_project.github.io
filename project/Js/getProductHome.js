@@ -6,7 +6,7 @@ function getCategory() {
             var categories = JSON.parse(this.responseText)
             //    console.log("ttttttttttttt")
             //    debugger;
-            var dropdown = document.getElementById("dropdown");
+            var dropdown = document.getElementById("drop");
             var divContainer = document.getElementById("categoryContainer")
             for (var i = 0; i < categories.length; i++) {
 
@@ -36,18 +36,25 @@ function getCategory() {
 
 
 
-                var option = document.createElement('option');
-                console.log(headCategoryName)
+                // var option = document.createElement('option');
+                // console.log(headCategoryName)
                 var linkToPage = document.createElement("a")
                 var txtLink = document.createTextNode(categories[i])
                 linkToPage.appendChild(txtLink)
-                linkToPage.setAttribute("href", "catigorePage.html")
-                option.appendChild(linkToPage)
-                console.log(option)
-                dropdown.appendChild(option)
+                var line = document.createElement("br")
+                // linkToPage.setAttribute("href", "catigorePage.html")
+                dropdown.appendChild(linkToPage)
+                dropdown.appendChild(line)
+                // console.log(option)
+                // dropdown.appendChild(option)
                 console.log(dropdown)
 
-
+                linkToPage.onclick = (function (val) {
+                    return function () {
+                        console.log("******************")
+                        localStorage.setItem("Category", val)
+                        window.open("catigorePage.html")
+                    } })(categories[i])
 
 
 

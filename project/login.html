@@ -41,7 +41,7 @@
                   <h5 style="margin-left: 5px;font-size: 15px;">Remember me</h5>
               </div>
 
-                <button type="submit" class="btn  text-bg-secondary w-50  " onclick="check()" > Login</button><br>
+                <button  class="btn  text-bg-secondary w-50" onclick="check()" > Login</button><br>
                 <a class="nav-link" href="#">Forget password</a>
     
                 
@@ -50,6 +50,23 @@
              
         </div>
     </section>
-    <script src="js/signupstorage.js"></script>
+    <script>
+      function check(){
+    var storedName = localStorage.getItem('inpEmail');
+    var storedPw = localStorage.getItem('psw');
+
+    var userName = document.getElementById('inpEmail');
+    var userPw = document.getElementById('inpPass');
+    var userRemember = document.getElementById("rememberMe");
+    console.log(storedName)
+    console.log(storedPw)
+    if(userName.value == storedName && userPw.value == storedPw){
+        alert('You are logged in.');
+    }else{
+        alert('Error on login');
+    }
+}
+
+    </script>
 </body>
 </html>
