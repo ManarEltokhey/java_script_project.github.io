@@ -1,7 +1,7 @@
 function getProducts()
 {
     var counter=0
-    var category =localStorage.getItem("Category")
+    var category =localStorage.getItem("pro.category")
 
 
     var xhttp=new XMLHttpRequest()
