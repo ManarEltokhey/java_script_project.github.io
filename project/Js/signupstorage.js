@@ -69,41 +69,121 @@
 // //     document.cookie="Mypassword="+p+";path=http://localhost/web6pm/";
 // // }
 
+//  get values from user
+function checkReg(){
+    var valMobile = document.getElementById("Mobile").value;
+    var valPsw = document.getElementById("psw").value;
+    var valUserName = document.getElementById("inpName").value;
+    var valEmail = document.getElementById("InpEmail").value;
+// RegExp
+var regMobile = /^01[0125][0-9]{8}$/gm
+var regPsw = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+var regUserName = /^[A-z]{3,} [A-z]{3,}$/
+var regEmail = /^[A-z][A-z]{2,}[0-9]*@(gmail|yahoo)(.com|.eg|.edu)$/
+// text RegExp on values
+var resMobile=regMobile.test(valMobile);
+var  resPsw= regPsw.test(valPsw);
+ var resUserName = regUserName.test(valUserName);
+ var resEmail = regEmail.test(valEmail);
+    }
+
+
+//Password
+    var myInput = document.getElementById("psw");
+    var letter = document.getElementById("letter");
+    var capital = document.getElementById("capital");
+    var number = document.getElementById("number");
+    var length = document.getElementById("length");
+    
+    // When the user clicks on the password field, show the message box
+    myInput.onfocus = function() {
+      document.getElementById("message").style.display = "block";
+    }
+    
+    // When the user clicks outside of the password field, hide the message box
+    myInput.onblur = function() {
+      document.getElementById("message").style.display = "none";
+    }
+    
+    // When the user starts to type something inside the password field
+    myInput.onkeyup = function() {
+      // Validate lowercase letters
+      var lowerCaseLetters = /[a-z]/g;
+      if(myInput.value.match(lowerCaseLetters)) {  
+        letter.classList.remove("invalid");
+        letter.classList.add("valid");
+      } else {
+        letter.classList.remove("valid");
+        letter.classList.add("invalid");
+      }
+      
+      // Validate capital letters
+      var upperCaseLetters = /[A-Z]/g;
+      if(myInput.value.match(upperCaseLetters)) {  
+        capital.classList.remove("invalid");
+        capital.classList.add("valid");
+      } else {
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
+      }
+    
+      // Validate numbers
+      var numbers = /[0-9]/g;
+      if(myInput.value.match(numbers)) {  
+        number.classList.remove("invalid");
+        number.classList.add("valid");
+      } else {
+        number.classList.remove("valid");
+        number.classList.add("invalid");
+      }
+      
+      // Validate length
+      if(myInput.value.length >= 8) {
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+      } else {
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+      }
+    }
+
+
+
+
+
 function store(){
 
     var name = document.getElementById('inpEmail');
     var pw = document.getElementById('psw');
-    var lowerCaseLetters = /[a-z]/g;
-    var upperCaseLetters = /[A-Z]/g;
-    var numbers = /[0-9]/g;
-
+    
     if(name.value.length == 0){
-        alert('Please fill in email');
-
     }else if(pw.value.length == 0){
-        alert('Please fill in password');
 
     }else if(name.value.length == 0 && pw.value.length == 0){
-        alert('Please fill in email and password');
-
-    }else if(pw.value.length > 8){
-        alert('Max of 8');
-
-    }else if(!pw.value.match(numbers)){
-        alert('please add 1 number');
-
-    }else if(!pw.value.match(upperCaseLetters)){
-        alert('please add 1 uppercase letter');
-
-    }else if(!pw.value.match(lowerCaseLetters)){
-        alert('please add 1 lovercase letter');
-
-    }else{
+    }
+    else{
+        console.log(pw)
         localStorage.setItem('inpEmail', name.value);
         localStorage.setItem('psw', pw.value);
         alert('Your account has been created');
     }
-}
+    }
+
+    // else if(pw.value.length > 8){
+    //     alert('Max of 8');
+
+    // }else if(!pw.value.match(numbers)){
+    //     alert('please add 1 number');
+
+    // }else if(!pw.value.match(upperCaseLetters)){
+    //     alert('please add 1 uppercase letter');
+
+    // }else if(!pw.value.match(lowerCaseLetters)){
+    //     alert('please add 1 lovercase letter');
+
+    //}
+  
+//}
 function check(){
     var storedName = localStorage.getItem('inpEmail');
     var storedPw = localStorage.getItem('psw');
