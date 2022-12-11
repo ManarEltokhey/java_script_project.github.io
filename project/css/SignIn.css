@@ -155,10 +155,6 @@
   input:invalid  {
     border-bottom: 2px solid rgb(151, 16, 16);
   
-
-    
-    
-    
  }  
  input:invalid ~ span[class=required]::after {
                 content: "required";

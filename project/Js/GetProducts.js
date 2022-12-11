@@ -109,13 +109,16 @@ function getProduct()
 
            var getrate= document.getElementById("proRate")
            var getRate=data.rating.rate;
+           
         //    console.log(typeof(data.rating.rate));
            for(var i=0;i<=getRate;i++){
-               var iconStar =document.createElement("i")
+               let iconStar =document.createElement("i")
                iconStar.classList.add("fa-solid","fa-star")
                getrate.appendChild(iconStar)
 
            }
+           getrate.appendChild(null)
+        
         //    ratePro.appendChild(getrate);
         //    divPro.appendChild(getRate);
 

@@ -105,16 +105,21 @@ var  resPsw= regPsw.test(valPsw);
       document.getElementById("message").style.display = "none";
     }
     
+    var valid=false
     // When the user starts to type something inside the password field
     myInput.onkeyup = function() {
+
       // Validate lowercase letters
       var lowerCaseLetters = /[a-z]/g;
       if(myInput.value.match(lowerCaseLetters)) {  
         letter.classList.remove("invalid");
         letter.classList.add("valid");
+        valid=true
+
       } else {
         letter.classList.remove("valid");
         letter.classList.add("invalid");
+        valid=false
       }
       
       // Validate capital letters
@@ -122,9 +127,11 @@ var  resPsw= regPsw.test(valPsw);
       if(myInput.value.match(upperCaseLetters)) {  
         capital.classList.remove("invalid");
         capital.classList.add("valid");
+        valid=true
       } else {
         capital.classList.remove("valid");
         capital.classList.add("invalid");
+        valid=false
       }
     
       // Validate numbers
@@ -132,21 +139,35 @@ var  resPsw= regPsw.test(valPsw);
       if(myInput.value.match(numbers)) {  
         number.classList.remove("invalid");
         number.classList.add("valid");
+        valid=true
       } else {
         number.classList.remove("valid");
         number.classList.add("invalid");
+        valid=false
       }
       
       // Validate length
       if(myInput.value.length >= 8) {
         length.classList.remove("invalid");
         length.classList.add("valid");
+        valid=true
       } else {
         length.classList.remove("valid");
         length.classList.add("invalid");
+        valid=false
       }
+
+      if(valid){
+        var btn =getElementById("btnSignUp")
+        btn.style.disabled=true;
+      }
+
     }
 
+   if(valid==false){
+        var btn =getElementById("btnSignUp")
+        btn.disabled=true;
+      }
 
 
 
