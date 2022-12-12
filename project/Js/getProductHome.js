@@ -38,17 +38,13 @@ function getCategory() {
 
 
 
-                // var option = document.createElement('option');
-                // console.log(headCategoryName)
                 var linkToPage = document.createElement("a")
                 var txtLink = document.createTextNode(categories[i])
                 linkToPage.appendChild(txtLink)
                 var line = document.createElement("br")
-                // linkToPage.setAttribute("href", "catigorePage.html")
                 dropdown.appendChild(linkToPage)
                 dropdown.appendChild(line)
-                // console.log(option)
-                // dropdown.appendChild(option)
+               
                 console.log(dropdown)
 
                 linkToPage.onclick = (function (val) {
@@ -96,14 +92,11 @@ function getProducts() {
         if (this.readyState == 4 && this.status == 200) {
 
             var data = JSON.parse(this.responseText)
-            //    console.log("ttttttttttttt")
-            //    debugger;
-
+          
 
             for (var pro of data) {
                 var btnId=0;
                 counter++
-                //console.log(categories[i])
                 if (pro.category === "electronics" && proCount1 < 3) {
                     proCount1++;
                     var productContainer = document.getElementById("category0")
@@ -117,9 +110,7 @@ function getProducts() {
                     var imgPro = document.createElement("img")
                     imgPro.setAttribute("src", pro.image)
                     imgPro.setAttribute("class", "p-img")
-                    // imgPro.onclick atla3 l fo2 ll sora ; id bta3ha proImg
-                    // imgPro.setAttribute("href","#proImg")
-
+                   
                     divPro.appendChild(imgPro)
 
                     var namePro = document.createElement("h5")
@@ -130,15 +121,12 @@ function getProducts() {
 
                     var ratePro = document.createElement('div')
                     ratePro.setAttribute("class", "star")
-                    // var getrate=document.createTextNode(pro.rating.rate);
-                    // console.log(typeof(pro.rating.rate));
-                    for (var i = 0; i <= pro.rating.rate; i++) {
+                     for (var i = 0; i <= pro.rating.rate; i++) {
                         var iconStar = document.createElement("i")
                         iconStar.classList.add("fa-solid", "fa-star")
                         ratePro.appendChild(iconStar)
 
                     }
-                    // ratePro.appendChild(getrate);
                     divPro.appendChild(ratePro);
                     imgPro.onclick = (function (val, category) {
                         return function () {
@@ -188,9 +176,7 @@ function getProducts() {
                     var imgPro = document.createElement("img")
                     imgPro.setAttribute("src", pro.image)
                     imgPro.setAttribute("class", "p-img")
-                    // imgPro.onclick atla3 l fo2 ll sora ; id bta3ha proImg
-                    // imgPro.setAttribute("href","#proImg")
-
+                  
                     divPro.appendChild(imgPro)
 
                     var namePro = document.createElement("h5")
@@ -201,15 +187,13 @@ function getProducts() {
 
                     var ratePro = document.createElement('div')
                     ratePro.setAttribute("class", "star")
-                    // var getrate=document.createTextNode(pro.rating.rate);
-                    // console.log(typeof(pro.rating.rate));
+                   
                     for (var i = 0; i <= pro.rating.rate; i++) {
                         var iconStar = document.createElement("i")
                         iconStar.classList.add("fa-solid", "fa-star")
                         ratePro.appendChild(iconStar)
 
                     }
-                    // ratePro.appendChild(getrate);
                     divPro.appendChild(ratePro);
                     imgPro.onclick = (function (val, category) {
                         return function () {
@@ -230,7 +214,7 @@ function getProducts() {
 
                     var btn = document.createElement("input")
                     btn.setAttribute("type", "button")
-                    btn.setAttribute("value", "Buy Now")
+                    btn.setAttribute("value", "Add To Cart")
                     btn.classList.add("buyBtn")
                     btn.onclick = function () {
                         localStorage.setItem("Pro" + pro.id, pro.id)
@@ -256,9 +240,7 @@ function getProducts() {
                     var imgPro = document.createElement("img")
                     imgPro.setAttribute("src", pro.image)
                     imgPro.setAttribute("class", "p-img")
-                    // imgPro.onclick atla3 l fo2 ll sora ; id bta3ha proImg
-                    // imgPro.setAttribute("href","#proImg")
-
+                   
                     divPro.appendChild(imgPro)
 
                     var namePro = document.createElement("h5")
@@ -269,15 +251,12 @@ function getProducts() {
 
                     var ratePro = document.createElement('div')
                     ratePro.setAttribute("class", "star")
-                    // var getrate=document.createTextNode(pro.rating.rate);
-                    // console.log(typeof(pro.rating.rate));
-                    for (var i = 0; i <= pro.rating.rate; i++) {
+                          for (var i = 0; i <= pro.rating.rate; i++) {
                         var iconStar = document.createElement("i")
                         iconStar.classList.add("fa-solid", "fa-star")
                         ratePro.appendChild(iconStar)
 
                     }
-                    // ratePro.appendChild(getrate);
                     divPro.appendChild(ratePro);
                     imgPro.onclick = (function (val, category) {
                         return function () {
@@ -299,7 +278,7 @@ function getProducts() {
 
                     var btn = document.createElement("input")
                     btn.setAttribute("type", "button")
-                    btn.setAttribute("value", "Buy Now")
+                    btn.setAttribute("value", "Add To Cart")
                     btn.classList.add("buyBtn")
                     btn.onclick = function () {
                         localStorage.setItem("Pro" + pro.id, pro.id)
@@ -325,9 +304,7 @@ function getProducts() {
                     var imgPro = document.createElement("img")
                     imgPro.setAttribute("src", pro.image)
                     imgPro.setAttribute("class", "p-img")
-                    // imgPro.onclick atla3 l fo2 ll sora ; id bta3ha proImg
-                    // imgPro.setAttribute("href","#proImg")
-
+                  
                     divPro.appendChild(imgPro)
 
                     var namePro = document.createElement("h5")
@@ -338,15 +315,12 @@ function getProducts() {
 
                     var ratePro = document.createElement('div')
                     ratePro.setAttribute("class", "star")
-                    // var getrate=document.createTextNode(pro.rating.rate);
-                    // console.log(typeof(pro.rating.rate));
-                    for (var i = 0; i <= pro.rating.rate; i++) {
+                      for (var i = 0; i <= pro.rating.rate; i++) {
                         var iconStar = document.createElement("i")
                         iconStar.classList.add("fa-solid", "fa-star")
                         ratePro.appendChild(iconStar)
 
                     }
-                    // ratePro.appendChild(getrate);
                     divPro.appendChild(ratePro);
                     imgPro.onclick = (function (val, category) {
                         return function () {
@@ -368,7 +342,7 @@ function getProducts() {
 
                     var btn = document.createElement("input")
                     btn.setAttribute("type", "button")
-                    btn.setAttribute("value", "Buy Now")
+                    btn.setAttribute("value", "Add To Cart")
                     btn.classList.add("buyBtn")
                     btn.onclick = function () {
                         localStorage.setItem("Pro" + pro.id, pro.id)

@@ -60,7 +60,7 @@ function getProducts()
 
         var btn=document.createElement("input")
          btn.setAttribute("type","button")
-         btn.setAttribute("value","Buy Now")
+         btn.setAttribute("value","Add To Cart")
          btn.classList.add("buyBtn")
          btn.onclick=function(){
          localStorage.setItem("Pro"+pro.id,pro.id)
@@ -104,50 +104,4 @@ getProducts();
 
 
 
-
-// function getProduct()
-// {
-    
-//     var xhttp=new XMLHttpRequest()
-//     xhttp.onreadystatechange=function(){
-//         if(this.readyState==4&&this.status==200)
-//         {
-//             //hana 3awez a2olo l product l id=x hat l sora bta3to azai b2a???
-//             var proId= data.id=x;
-//            var data=JSON.parse(this.responseText)
-//            var imgPro= document.getElementById("proImg")
-//            imgPro.setAttribute("src",proId.image)
-           
-//            var categoryName= document.getElementById("catName")
-//            categoryName=document.createTextNode(proId.category)
-
-//            var getRate= document.getElementById("proRate")
-//             getrate=document.createTextNode(pro.rating.rate);
-//            console.log(typeof(pro.rating.rate));
-//            for(var i=0;i<=getrate;i++){
-//                var iconStar =document.createElement(i)
-//                iconStar.classList.add(fa-solid,fa-star)
-//                ratePro.appendChild(iconStar)
-   
-//            }
-//            ratePro.appendChild(getrate);
-//            divPro.appendChild(ratePro);
-        
-        
-//            var proName= document.getElementById("proName")
-//            proName=document.createTextNode(proId.title)
-
-//            var proPrice= document.getElementById("proPrice")
-//            categoryName=document.createTextNode(" $ "+ proId.price)
-           
-//            var proDescription= document.getElementById("proDescription")
-//            proDescription=document.createTextNode(proId.description)
-         
-//     }
-// }
-//     xhttp.open("GET","https://fakestoreapi.com/products",true)
-//     xhttp.send();
-     
-// }
-// getProducts();
 

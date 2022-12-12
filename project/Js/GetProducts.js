@@ -1,7 +1,8 @@
 function getProducts()
 {
     var counter=0
-    var category =localStorage.getItem("pro.category")
+    var category =localStorage.getItem("Category")
+    
 
 
     var xhttp=new XMLHttpRequest()
@@ -64,7 +65,7 @@ function getProducts()
 
         var btn=document.createElement("input")
          btn.setAttribute("type","button")
-         btn.setAttribute("value","Buy Now")
+         btn.setAttribute("value","Add To Cart")
          btn.classList.add("buyBtn")
          btn.onclick=function(){
          localStorage.setItem("Pro"+pro.id,pro.id)
