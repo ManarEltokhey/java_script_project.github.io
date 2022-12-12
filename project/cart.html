@@ -40,7 +40,7 @@
 
                     <div class="icons">
                         <a href="#"><i class="fa-regular fa-user"></i></a>
-                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" style="text-decoration: none;"><i class="fa-solid fa-cart-shopping"></i><span class="red">0</span></a>
                     </div>
                 </div>
             </div>
@@ -50,12 +50,14 @@
         <div class="cart-container">
             <div class="cart">
                 <p class="cart-title">Cart</p>
-                <hr>
-                <div class="cart-item">
+                <div class="empty-cart">
+                <img src="resources/empty.png">
+                <p>Your Cart is Empty</p></div>
+                <!-- <div class="cart-item">
                     <img src="resources/phone1.webp">
                     <div class="cart-item-details">
                         <p class="product-name">Samsung Galaxy A13 Dual SIM, 64GB, 4GB RAM, 4G LTE - Blue</p>
-                        <p class="price">4699.00<span class="egp"> EGP</span></p>
+                        <p class="price">4699.00<span class="egp"> $</span></p>
                     </div>
                     <div class="cart-control">
                         <div class="item-quantity">
@@ -71,7 +73,7 @@
                     <img src="resources/phone1.webp">
                     <div class="cart-item-details">
                         <p class="product-name">Samsung Galaxy A13 Dual SIM, 64GB, 4GB RAM, 4G LTE - Blue</p>
-                        <p class="price">4699.00<span class="egp"> EGP</span></p>
+                        <p class="price">4699.00<span class="egp"> $</span></p>
                     </div>
                     <div class="cart-control">
                         <div class="item-quantity">
@@ -79,7 +81,7 @@
                             <a class="remove-btn"><i class="fa-solid fa-trash-can"></i> remove</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         
         <div class="checkout-container">
@@ -103,9 +105,7 @@
             </div>
         </div>
     </div>
-    
 </div>
-
 
 
     <script src="js/cart.js"></script>

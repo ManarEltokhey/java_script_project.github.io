@@ -1,3 +1,5 @@
+
+
 function getCategory() {
     var counter
     var xhttp = new XMLHttpRequest()
@@ -99,6 +101,7 @@ function getProducts() {
 
 
             for (var pro of data) {
+                var btnId=0;
                 counter++
                 //console.log(categories[i])
                 if (pro.category === "electronics" && proCount1 < 3) {
@@ -121,6 +124,7 @@ function getProducts() {
 
                     var namePro = document.createElement("h5")
                     var txtNamePro = document.createTextNode(pro.title)
+                    namePro.setAttribute("class","p-Name")
                     namePro.appendChild(txtNamePro)
                     divPro.appendChild(namePro)
 
@@ -149,6 +153,7 @@ function getProducts() {
                     })(counter)
                     var pricePro = document.createElement("h4")
                     var txtPricePro = document.createTextNode(" $ " + pro.price)
+                    pricePro.setAttribute("class","p-price")
                     pricePro.appendChild(txtPricePro)
                     divPro.appendChild(pricePro)
 
@@ -156,12 +161,14 @@ function getProducts() {
                     btn.setAttribute("type", "button")
                     btn.setAttribute("value", "Add To Cart")
                     btn.classList.add("buyBtn")
+                
+
                     btn.onclick = function () {
                         localStorage.setItem("Pro" + pro.id, pro.id)
 
                     }
                     divPro.appendChild(btn)
-
+                    btn.addEventListener("click", addToCart)
 
                     productContainer.appendChild(divPro)
                 }
@@ -188,6 +195,7 @@ function getProducts() {
 
                     var namePro = document.createElement("h5")
                     var txtNamePro = document.createTextNode(pro.title)
+                    namePro.setAttribute("class","p-Name")
                     namePro.appendChild(txtNamePro)
                     divPro.appendChild(namePro)
 
@@ -216,6 +224,7 @@ function getProducts() {
                     })(counter)
                     var pricePro = document.createElement("h4")
                     var txtPricePro = document.createTextNode(" $ " + pro.price)
+                    pricePro.setAttribute("class","p-price")
                     pricePro.appendChild(txtPricePro)
                     divPro.appendChild(pricePro)
 
@@ -227,7 +236,7 @@ function getProducts() {
                         localStorage.setItem("Pro" + pro.id, pro.id)
                     }
                     divPro.appendChild(btn)
-
+                    btn.addEventListener("click", addToCart)
 
                     productContainer.appendChild(divPro)
 
@@ -254,6 +263,7 @@ function getProducts() {
 
                     var namePro = document.createElement("h5")
                     var txtNamePro = document.createTextNode(pro.title)
+                    namePro.setAttribute("class","p-Name")
                     namePro.appendChild(txtNamePro)
                     divPro.appendChild(namePro)
 
@@ -283,6 +293,7 @@ function getProducts() {
 
                     var pricePro = document.createElement("h4")
                     var txtPricePro = document.createTextNode(" $ " + pro.price)
+                    pricePro.setAttribute("class","p-price")
                     pricePro.appendChild(txtPricePro)
                     divPro.appendChild(pricePro)
 
@@ -294,7 +305,7 @@ function getProducts() {
                         localStorage.setItem("Pro" + pro.id, pro.id)
                     }
                     divPro.appendChild(btn)
-
+                    btn.addEventListener("click", addToCart)
 
                     productContainer.appendChild(divPro)
 
@@ -320,6 +331,7 @@ function getProducts() {
                     divPro.appendChild(imgPro)
 
                     var namePro = document.createElement("h5")
+                    namePro.setAttribute("class","p-Name")
                     var txtNamePro = document.createTextNode(pro.title)
                     namePro.appendChild(txtNamePro)
                     divPro.appendChild(namePro)
@@ -350,6 +362,7 @@ function getProducts() {
 
                     var pricePro = document.createElement("h4")
                     var txtPricePro = document.createTextNode(" $ " + pro.price)
+                    pricePro.setAttribute("class","p-price")
                     pricePro.appendChild(txtPricePro)
                     divPro.appendChild(pricePro)
 
@@ -361,10 +374,10 @@ function getProducts() {
                         localStorage.setItem("Pro" + pro.id, pro.id)
                     }
                     divPro.appendChild(btn)
-
+                    btn.addEventListener("click", addToCart)
 
                     productContainer.appendChild(divPro)
-
+                    
 
                 }
             }
@@ -381,4 +394,73 @@ function getProducts() {
     xhttp.send();
 
 }
+
+var addToCartButtons = document.getElementsByClassName("buyBtn")
+console.log(addToCartButtons)
+for (var i = 0; i < addToCartButtons.length; i++) {
+    var addToCartButton = addToCartButtons[i]
+    addToCartButton.addEventListener("click", addToCart)
+}
+var productsForCart=[]
+if (localStorage.getItem("products")){
+    productsForCart=JSON.parse(localStorage.getItem("products"))
+}
+var productCounter=0
+function addToCart(e) {
+    var addButtonClicked = e.target
+    var productItem = addButtonClicked.parentElement
+    console.log(productItem)
+    var productImg = productItem.getElementsByClassName("p-img")[0].src
+    var productName = productItem.getElementsByClassName("p-Name")[0].innerText
+    var productPrice = productItem.getElementsByClassName("p-price")[0].innerText
+    console.log(productImg, productName, productPrice)
+    productsForCart.push({"product_Img":productImg,"product_Name":productName,"product_Price":productPrice})
+    localStorage.setItem("products", JSON.stringify(productsForCart));
+    productCounter++
+
+    //addItemToCart(productImg, productName, productPrice)
+
+    //updateCartTotal()
+    
+}
+// function addItemToCart(Img, Name, Price) {
+//     var cartContainer = document.getElementsByClassName("cart")[0]
+//     if(productCounter==1){
+//     var empty = cartContainer.getElementsByClassName("empty-cart")[0]
+//     empty.remove()}
+//     var cartItemNames = document.getElementsByClassName("product-name")
+//     var cartItemSelect = document.createElement("div")
+//     cartItemSelect.setAttribute("class", "cart-item")
+//     var hori = document.createElement("hr")
+    
+    
+//     for (var i = 0; i < cartItemNames.length; i++) {
+//         if (cartItemNames[i].innerText === Name) {
+//             alert("item already added to the cart")
+//             productCounter--
+//             return
+//         }
+//     }
+//     cartContainer.appendChild(hori)
+//     cartContainer.appendChild(cartItemSelect)
+//     red=document.getElementsByClassName("red")[0]
+//     red.innerText=productCounter
+//     red.setAttribute("style","display:inline;")
+//     cartItemSelect.innerHTML += `
+//                     <img src="${Img}">
+//                     <div class="cart-item-details">
+//                         <p class="product-name">${Name}</p>
+//                         <p class="price">${Price}</p>
+//                     </div>
+//                     <div class="cart-control">
+//                         <div class="item-quantity">
+//                             <input type="number" name="quantity" class="quantity" value=1 min=1>
+//                             <a class="remove-btn"><i class="fa-solid fa-trash-can"></i> remove</a>
+//                         </div>
+//                     </div>                
+//     `
+//     cartItemSelect.getElementsByClassName("remove-btn")[0].addEventListener("click", removeCartItem)
+//     cartItemSelect.getElementsByClassName("quantity")[0].addEventListener("change", quantityChanged)
+// }
+
 
